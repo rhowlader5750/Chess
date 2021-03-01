@@ -5,7 +5,8 @@ This is our main driver file. Handles user input
 import pygame as p
 from Chess import ChessEngine
 
-WIDTH = HEIGHT = 512
+WIDTH = 512 
+HEIGHT = 512
 DIMENSION = 8
 SQ_SIZE = HEIGHT // DIMENSION
 MAX_FPS = 15
@@ -84,7 +85,7 @@ def drawGameState(screen, gs):
 
 # draw the squares on the board
 def drawBoard(screen):
-    colors = [p.Color("gray"), p.Color("light blue")]
+    colors = [p.Color("white"), p.Color("black")]
     for r in range(DIMENSION):
         for c in range(DIMENSION):
             color = colors[((r+c) % 2)]
